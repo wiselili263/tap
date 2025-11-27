@@ -1,0 +1,200 @@
+1)1-dən N-ə qədər cüt ədədlərin cəmi
+#include <iostream>
+using namespace std;
+
+int sumEven(int n) {
+    int s = 0;
+    for(int i = 1; i <= n; i++)
+        if(i % 2 == 0) s += i;
+    return s;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    cout << sumEven(n);
+}
+
+
+2)ədədin rəqəmlərinin cəmi
+#include <iostream>
+using namespace std;
+
+int sumDigits(int n) {
+    int s = 0;
+    while(n) {
+        s += n % 10;
+        n /= 10;
+    }
+    return s;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    cout << sumDigits(n);
+}
+
+
+3)ədədin tərsini tapmaq
+#include <iostream>
+using namespace std;
+
+int reverseNum(int n) {
+    int t = 0;
+    while(n) {
+        t = t * 10 + n % 10;
+        n /= 10;
+    }
+    return t;
+}
+
+int main() {
+    int n;
+    cin >> n;
+    cout << reverseNum(n);
+}
+
+
+4)palindrome olub-olmadığın yoxlamaq
+#include <iostream>
+using namespace std;
+
+int reverseNum(int n){
+    int t = 0;
+    while(n){
+        t = t * 10 + n % 10;
+        n /= 10;
+    }
+    return t;
+}
+
+bool isPalindrome(int n){
+    return n == reverseNum(n);
+}
+
+int main(){
+    int n;
+    cin >> n;
+    cout << (isPalindrome(n) ? "Yes" : "No");
+}
+
+
+5)ədədin tam bölənlərinin sayın tapmaq
+#include <iostream>
+using namespace std;
+
+int divisorCount(int n){
+    int c = 0;
+    for(int i = 1; i <= n; i++)
+        if(n % i == 0) c++;
+    return c;
+}
+
+int main(){
+    int n;
+    cin >> n;
+    cout << divisorCount(n);
+}
+
+
+
+6)sadə olub-olmadığın yoxlamaq
+#include <iostream>
+using namespace std;
+
+bool isPrime(int n){
+    if(n < 2) return false;
+    for(int i = 2; i * i <= n; i++)
+        if(n % i == 0) return false;
+    return true;
+}
+
+int main(){
+    int n;
+    cin >> n;
+    cout << (isPrime(n) ? "Yes" : "No");
+}
+
+
+7)fibonaccinin N-ci elementi
+#include <iostream>
+using namespace std;
+
+int fibonacci(int n){
+    if(n <= 1) return n;
+    int a = 0, b = 1, c;
+    for(int i = 2; i <= n; i++){
+        c = a + b;
+        a = b;
+        b = c;
+    }
+    return b;
+}
+
+int main(){
+    int n;
+    cin >> n;
+    cout << fibonacci(n);
+}
+8)Armstrong olub-olmadığını yoxlama
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+bool isArmstrong(int n){
+    int k = to_string(n).size();
+    int s = 0, x = n;
+    while(x){
+        s += pow(x % 10, k);
+        x /= 10;
+    }
+    return s == n;
+}
+
+int main(){
+    int n;
+    cin >> n;
+    cout << (isArmstrong(n) ? "Yes" : "No");
+}
+
+
+
+9)binary formaya çevirmək
+#include <iostream>
+using namespace std;
+
+string toBinary(int n){
+    if(n == 0) return "0";
+    string b = "";
+    while(n){
+        b = char('0' + n % 2) + b;
+        n /= 2;
+    }
+    return b;
+}
+
+int main(){
+    int n;
+    cin >> n;
+    cout << toBinary(n);
+}
+
+
+10)mükəmməl ədəd olub-olmadığın yoxlamaq
+#include <iostream>
+using namespace std;
+
+bool isPerfect(int n){
+    int s = 0;
+    for(int i = 1; i <= n/2; i++)
+        if(n % i == 0) s += i;
+    return s == n;
+}
+
+int main(){
+    int n;
+    cin >> n;
+    cout << (isPerfect(n) ? "Yes" : "No");
+}
+
