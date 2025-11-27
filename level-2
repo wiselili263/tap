@@ -1,0 +1,156 @@
+1)#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cout << "Iki eded daxil edin: ";
+    cin >> a >> b;
+
+    if (a > b)
+        cout << "Boyuk eded: " << a << endl;
+    else if (b > a)
+        cout << "Boyuk eded: " << b << endl;
+    else
+        cout << "Ededler beraberdir." << endl;
+
+    return 0;
+}
+
+
+2)#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Eded daxil edin: ";
+    cin >> n;
+
+    if (n > 0)
+        cout << "Musbet" << endl;
+    else if (n < 0)
+        cout << "Menfi" << endl;
+    else
+        cout << "Sifir" << endl;
+
+    return 0;
+}
+
+
+
+3)#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b, c;
+    cout << "Uc eded daxil edin: ";
+    cin >> a >> b >> c;
+
+    int max = a;
+
+    if (b > max) max = b;
+    if (c > max) max = c;
+
+    cout << "En boyuk: " << max << endl;
+
+    return 0;
+}
+
+
+
+4)#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Eded daxil edin: ";
+    cin >> n;
+
+    if (n % 2 == 0)
+        cout << "Cut" << endl;
+    else
+        cout << "Tek" << endl;
+
+    return 0;
+}
+
+
+5)#include <iostream>
+using namespace std;
+
+int main() {
+    int bal;
+    cout << "Bal daxil edin (0-100): ";
+    cin >> bal;
+
+    if (bal >= 0 && bal <= 50) cout << "F" << endl;
+    else if (bal <= 60) cout << "E" << endl;
+    else if (bal <= 70) cout << "D" << endl;
+    else if (bal <= 80) cout << "C" << endl;
+    else if (bal <= 90) cout << "B" << endl;
+    else if (bal <= 100) cout << "A" << endl;
+    else cout << "Duzgun bal daxil edin." << endl;
+
+    return 0;
+}
+
+
+
+6)#include <iostream>
+using namespace std;
+
+int main() {
+    int ay;
+    cout << "Ay nomresi daxil edin (1-12): ";
+    cin >> ay;
+
+    if (ay == 12 || ay == 1 || ay == 2)
+        cout << "Qis" << endl;
+    else if (ay >= 3 && ay <= 5)
+        cout << "Yaz" << endl;
+    else if (ay >= 6 && ay <= 8)
+        cout << "Yay" << endl;
+    else if (ay >= 9 && ay <= 11)
+        cout << "Payiz" << endl;
+    else
+        cout << "Yanlis ay nomresi." << endl;
+
+    return 0;
+}
+
+
+7)#include <iostream>
+using namespace std;
+
+int main() {
+    double a, b;
+    char op;
+
+    cout << "Birinci eded: ";
+    cin >> a;
+    cout << "Operator (+, -, *, /): ";
+    cin >> op;
+    cout << "Ikinci eded: ";
+    cin >> b;
+
+    switch (op) {
+        case '+':
+            cout << "Netice: " << a + b << endl;
+            break;
+        case '-':
+            cout << "Netice: " << a - b << endl;
+            break;
+        case '*':
+            cout << "Netice: " << a * b << endl;
+            break;
+        case '/':
+            if (b == 0)
+                cout << "Sifira bolme olmaz." << endl;
+            else
+                cout << "Netice: " << a / b << endl;
+            break;
+        default:
+            cout << "Yanlis operator." << endl;
+    }
+
+    return 0;
+}
