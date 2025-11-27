@@ -1,0 +1,150 @@
+1)#include <iostream>
+using namespace std;
+
+int main() {
+    string ad;
+    cout << "Adinizi daxil edin: ";
+    cin >> ad;
+    cout << "Salam, " << ad << "!" << endl;
+    return 0;
+}
+
+
+
+2)#include <iostream>
+using namespace std;
+
+int main() {
+    int a, b;
+    cout << "Iki eded daxil edin: ";
+    cin >> a >> b;
+
+    cout << "Cem: " << a + b << endl;
+    cout << "Ferq: " << a - b << endl;
+    cout << "Hasil: " << a * b << endl;
+
+    if (b != 0)
+        cout << "Bolme: " << a / b << endl;
+    else
+        cout << "0-a bolme yoxdur." << endl;
+
+    return 0;
+}
+
+
+3)#include <iostream>
+using namespace std;
+
+int main() {
+    int n;
+    cout << "Eded daxil edin: ";
+    cin >> n;
+
+    cout << "Kvadrat: " << n * n << endl;
+    cout << "Kub: " << n * n * n << endl;
+
+    return 0;
+}
+
+
+
+
+4)#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main() {
+    double r;
+    cout << "Radius daxil edin: ";
+    cin >> r;
+
+    cout << "Sahe: " << M_PI * r * r << endl;
+    cout << "Cevre: " << 2 * M_PI * r << endl;
+
+    return 0;
+}
+
+
+5)#include <iostream>
+using namespace std;
+
+int main() {
+    double c;
+    cout << "Selsi daxil edin: ";
+    cin >> c;
+
+    cout << "Fahrenheit: " << (c * 9 / 5) + 32 << endl;
+
+    return 0;
+}
+
+
+
+6)#include <iostream>
+using namespace std;
+
+int main() {
+    double a, b, c;
+    cout << "Uc eded daxil edin: ";
+    cin >> a >> b >> c;
+
+    cout << "Ortalama: " << (a + b + c) / 3 << endl;
+
+    return 0;
+}
+
+
+
+7)#include <iostream>
+using namespace std;
+
+int main() {
+    int x, y, temp;
+    cout << "Iki eded daxil edin: ";
+    cin >> x >> y;
+
+    temp = x;
+    x = y;
+    y = temp;
+
+    cout << "Yeni x: " << x << endl;
+    cout << "Yeni y: " << y << endl;
+
+    return 0;
+}
+
+
+
+8)#include <iostream>
+using namespace std;
+
+int main() {
+    double teref;
+    cout << "Kvadratin terefi daxil edin: ";
+    cin >> teref;
+
+    cout << "Sahe: " << teref * teref << endl;
+    cout << "Perimetr: " << 4 * teref << endl;
+
+    return 0;
+}
+
+
+
+9)#include <iostream>
+using namespace std;
+
+int main() {
+    int s;
+    cout << "Saniye daxil edin: ";
+    cin >> s;
+
+    cout << "Deyiqe: " << s / 60 << endl;
+    cout << "Saat: " << s / 3600 << endl;
+
+    return 0;
+}
+
+
+
+
